@@ -1,0 +1,18 @@
+    @mixin flexCenter($direction, $just) {
+        display: flex;
+        flex-direction: $direction;
+        align-items: center;
+        justify-content: $just;
+    }
+    
+    .wrapper {
+        margin: 0 auto;
+        @include flexCenter(column, center);
+        width: 20vw;
+        height: 28vw;
+        border: 1px solid black;
+        border-radius: 10px;
+        .form-wrapper {
+            @include flexCenter(column, space-around);
+        }
+    }
